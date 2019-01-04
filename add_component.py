@@ -6,11 +6,10 @@ from GlyphsApp import *
 
 glyphInsert = Glyphs.font.glyphs['_part.LC_Giyeok1']
 posToInsert = NSMakePoint(0, 0)
-componentNew = GSComponent(glyphInsert, NSMakePoint(0, 0))
 
 print 'Glpyh : %s' % glyphInsert
 print 'Position  : %s\n' % posToInsert
 
 for layer in Glyphs.font.selectedLayers:
-	layer.components.append(componentNew)
+	layer.components.append(GSComponent(glyphInsert, NSMakePoint(0, 0)))
 	print '%s done.' % layer
