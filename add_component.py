@@ -1,4 +1,6 @@
 # Glyphs script for inserting component into selected glyphs
+# Author : Yun Hyunjin
+# Date : 2019/01/04
 
 from GlyphsApp import *
 
