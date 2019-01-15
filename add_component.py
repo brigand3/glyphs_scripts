@@ -1,4 +1,8 @@
-# Glyphs script for inserting component into selected glyphs
+#MenuTitle: Add component into selected glyphs
+# -*- coding: utf-8 -*-
+__doc__="""
+Glyphs script for inserting component into selected glyphs
+"""
 # Author : Yun Hyunjin
 # Date : 2019/01/04
 
