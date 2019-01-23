@@ -14,15 +14,14 @@ def sortComponents(components):
 		print 'before %d - %s' % (i, components[i].componentName)
 
 	bModified = False
-	newComponents = copy.copy(components)	
 
 	while True:
 		bBreak = True		
-		for i in range(0, len(newComponents) - 1):
-			if (newComponents[i].componentName > newComponents[i+1].componentName):
-				component = copy.copy(newComponents[i])
-				del(newComponents[i])
-				newComponents.append(component)
+		for i in range(0, len(components) - 1):
+			if (components[i].componentName > components[i+1].componentName):
+				component = copy.copy(components[i])
+				del(components[i])
+				components.append(component)
 				bModified = True
 				bBreak = False
 		
@@ -30,16 +29,12 @@ def sortComponents(components):
 			break
 			
 	if (bModified == True):
-		for i in range(0, len(newComponents)):
-			print 'after %d - %s' % (i, newComponents[i].componentName)
-		return newComponents
-	else:
-		return components
-		
+		for i in range(0, len(components)):
+			print 'after %d - %s' % (i, components[i].componentName)
 	
 for layer in Glyphs.font.selectedLayers:
 	if len(layer.components) > 0:
 		print '*****************************************'
 		print layer.parent
 		print '*****************************************'
-		layer.components = sortComponents(layer.components)
+		sortComponents(layer.components)
